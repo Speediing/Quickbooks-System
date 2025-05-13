@@ -128,15 +128,18 @@ export function BrandSidebar({
           <SidebarGroupContent>
             <SidebarMenu>
               {mainNavItems.map((item) => (
-                <SidebarMenuItem
-                  key={item.title}
-                  active={pathname === item.href}
-                  className="text-foreground hover:bg-muted data-[active=true]:bg-muted/80 data-[active=true]:text-foreground"
-                >
-                  <Link href={item.href}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </Link>
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={pathname === item.href}
+                    tooltip={item.title}
+                    className="text-foreground hover:bg-muted data-[active=true]:bg-muted/80 data-[active=true]:text-foreground"
+                  >
+                    <Link href={item.href}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
                   {item.badge && (
                     <SidebarMenuBadge
                       className={cn(
@@ -159,15 +162,18 @@ export function BrandSidebar({
           <SidebarGroupContent>
             <SidebarMenu>
               {toolsNavItems.map((item) => (
-                <SidebarMenuItem
-                  key={item.title}
-                  active={pathname === item.href}
-                  className="text-foreground hover:bg-muted data-[active=true]:bg-muted/80 data-[active=true]:text-foreground"
-                >
-                  <Link href={item.href}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </Link>
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={pathname === item.href}
+                    tooltip={item.title}
+                    className="text-foreground hover:bg-muted data-[active=true]:bg-muted/80 data-[active=true]:text-foreground"
+                  >
+                    <Link href={item.href}>
+                      {item.icon}
+                      <span>{item.title}</span>
+                    </Link>
+                  </SidebarMenuButton>
                   {item.badge && (
                     <SidebarMenuBadge
                       className={cn(
