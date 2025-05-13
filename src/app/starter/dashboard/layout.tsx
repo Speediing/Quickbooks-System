@@ -13,16 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div
-      data-theme="quickbooks"
-      data-colorscheme="dark"
-      className="min-h-screen bg-[var(--color-page-background-primary)]"
-    >
+    <div className="min-h-screen bg-background">
       <SidebarProvider>
         <BrandHeader />
         <div className="flex">
           <BrandSidebar />
-          <main className="mt-16 flex-1 bg-[var(--color-page-background-primary)] ml-0 md:ml-[16rem]">
+          <main className="mt-16 flex-1 bg-background ml-0 md:ml-[16rem]">
             <div className="container p-6">{children}</div>
           </main>
         </div>

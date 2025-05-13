@@ -25,13 +25,13 @@ export function BrandHeader() {
   const isCollapsed = state === "collapsed";
 
   return (
-    <header className="fixed z-50 w-full border-b border-[var(--color-container-border-primary)] bg-[var(--color-container-background-primary)]">
+    <header className="fixed z-50 w-full border-b border-border bg-background">
       <div className="flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-4">
           <Button
             variant="ghost"
             size="icon"
-            className="hidden size-8 md:flex text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+            className="hidden size-8 md:flex text-foreground hover:bg-muted"
             onClick={toggleSidebar}
           >
             {isCollapsed ? (
@@ -44,7 +44,7 @@ export function BrandHeader() {
           <Button
             variant="ghost"
             size="icon"
-            className="size-8 md:hidden text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+            className="size-8 md:hidden text-foreground hover:bg-muted"
             onClick={toggleSidebar}
           >
             <Menu className="size-4" />
@@ -60,15 +60,15 @@ export function BrandHeader() {
             <Input
               type="text"
               placeholder="Search (Ctrl + /)"
-              className="h-9 w-96 pl-9 bg-[var(--color-input-background-primary)] border-[var(--color-input-border-primary)] text-[var(--color-text-primary)] placeholder:text-[var(--color-input-placeholder)]"
+              className="h-9 w-96 pl-9 bg-background border-input text-foreground placeholder:text-muted-foreground"
             />
-            <Search className="absolute top-2.5 left-3 size-4 text-[var(--color-icon-secondary)]" />
+            <Search className="absolute top-2.5 left-3 size-4 text-muted-foreground" />
           </div>
 
           <Button
             variant="ghost"
             size="sm"
-            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+            className="text-foreground hover:bg-muted"
           >
             <Plus className="mr-2 size-4" />
             New
@@ -77,7 +77,7 @@ export function BrandHeader() {
           <Button
             variant="ghost"
             size="sm"
-            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+            className="text-foreground hover:bg-muted"
           >
             <Bell className="mr-2 size-4" />
             Notifications
@@ -86,7 +86,7 @@ export function BrandHeader() {
           <Button
             variant="ghost"
             size="sm"
-            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+            className="text-foreground hover:bg-muted"
           >
             <HelpCircle className="mr-2 size-4" />
             Help
@@ -95,14 +95,14 @@ export function BrandHeader() {
           <Button
             variant="ghost"
             size="sm"
-            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+            className="text-foreground hover:bg-muted"
           >
             <Settings className="mr-2 size-4" />
             Settings
           </Button>
 
           <Avatar className="size-8">
-            <AvatarFallback className="bg-[var(--color-ui-primary)] text-[var(--color-text-accent)]">
+            <AvatarFallback className="bg-primary text-primary-foreground">
               <span className="text-xs">ME</span>
             </AvatarFallback>
           </Avatar>
@@ -112,19 +112,19 @@ export function BrandHeader() {
           <Button
             variant="ghost"
             size="sm"
-            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+            className="text-foreground hover:bg-muted"
           >
             <Search className="h-5 w-5" />
           </Button>
           <Button
             variant="ghost"
             size="sm"
-            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+            className="text-foreground hover:bg-muted"
           >
             <Bell className="h-5 w-5" />
           </Button>
           <Avatar className="size-8">
-            <AvatarFallback className="bg-[var(--color-ui-primary)] text-[var(--color-text-accent)]">
+            <AvatarFallback className="bg-primary text-primary-foreground">
               <span className="text-xs">ME</span>
             </AvatarFallback>
           </Avatar>

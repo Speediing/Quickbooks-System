@@ -108,17 +108,13 @@ export function BrandSidebar({
   ];
 
   return (
-    <Sidebar
-      variant="sidebar"
-      collapsible="icon"
-      className="mt-16 bg-[var(--color-container-background-secondary)] border-r border-[var(--color-container-border-primary)]"
-    >
+    <Sidebar className="mt-16 bg-muted border-r border-border">
       <SidebarHeader>
         <div className={cn(isCollapsed ? "py-2" : "p-2")}>
           <Button
             className={cn(
               isCollapsed ? "h-8 w-8 p-0" : "w-full",
-              "bg-[var(--color-ui-primary)] text-[var(--color-text-accent)] hover:bg-[var(--color-ui-primary-hover)]"
+              "bg-primary text-primary-foreground hover:bg-primary/90"
             )}
           >
             <Plus className={cn("size-4", !isCollapsed && "mr-1")} />
@@ -128,30 +124,23 @@ export function BrandSidebar({
       </SidebarHeader>
 
       <SidebarContent>
-        {/* Main Nav Items */}
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
               {mainNavItems.map((item) => (
-                <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={
-                      pathname === item.href ||
-                      (pathname === "" && item.href === "/")
-                    }
-                    tooltip={item.title}
-                    className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)] data-[active=true]:bg-[var(--color-container-background-accent-selected)] data-[active=true]:text-[var(--color-text-primary)]"
-                  >
-                    <Link href={item.href}>
-                      {item.icon}
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
+                <SidebarMenuItem
+                  key={item.title}
+                  active={pathname === item.href}
+                  className="text-foreground hover:bg-muted data-[active=true]:bg-muted/80 data-[active=true]:text-foreground"
+                >
+                  <Link href={item.href}>
+                    {item.icon}
+                    <span>{item.title}</span>
+                  </Link>
                   {item.badge && (
                     <SidebarMenuBadge
                       className={cn(
-                        "border border-[var(--color-container-border-primary)] bg-[var(--color-container-background-accent)] text-[var(--color-text-primary)]"
+                        "border border-border bg-muted text-foreground"
                       )}
                     >
                       {item.badge.text}
@@ -163,29 +152,26 @@ export function BrandSidebar({
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <SidebarSeparator className="border-[var(--color-container-border-tertiary)]" />
+        <SidebarSeparator className="border-border/50" />
 
         {/* Tools Nav Items */}
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
               {toolsNavItems.map((item) => (
-                <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={pathname === item.href}
-                    tooltip={item.title}
-                    className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)] data-[active=true]:bg-[var(--color-container-background-accent-selected)] data-[active=true]:text-[var(--color-text-primary)]"
-                  >
-                    <Link href={item.href}>
-                      {item.icon}
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
+                <SidebarMenuItem
+                  key={item.title}
+                  active={pathname === item.href}
+                  className="text-foreground hover:bg-muted data-[active=true]:bg-muted/80 data-[active=true]:text-foreground"
+                >
+                  <Link href={item.href}>
+                    {item.icon}
+                    <span>{item.title}</span>
+                  </Link>
                   {item.badge && (
                     <SidebarMenuBadge
                       className={cn(
-                        "border border-[var(--color-container-border-primary)] bg-[var(--color-container-background-accent)] text-[var(--color-text-primary)]"
+                        "border border-border bg-muted text-foreground"
                       )}
                     >
                       {item.badge.text}
