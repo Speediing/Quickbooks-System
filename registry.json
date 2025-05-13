@@ -52,6 +52,18 @@
           "path": "src/app/starter/dashboard/page.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
+        },
+        {
+          "path": "src/components/brand-header.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/logo.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/components/brand-sidebar.tsx",
+          "type": "registry:component"
         }
       ]
     },
