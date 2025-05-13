@@ -87,13 +87,13 @@ export function RegistrySidebar() {
     if (searchTerm) {
       setFilteredComponents(
         componentItems.filter((item) =>
-          item.name.toLowerCase().includes(searchTerm.toLowerCase()),
-        ),
+          item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        )
       );
       setFilteredBlocks(
         blockItems.filter((item) =>
-          item.name.toLowerCase().includes(searchTerm.toLowerCase()),
-        ),
+          item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        )
       );
     } else {
       setFilteredComponents(componentItems);
@@ -104,14 +104,14 @@ export function RegistrySidebar() {
   return (
     <>
       {/* MOBILE MENU TRIGGER */}
-      <div className="flex items-center justify-start rounded-md p-4 md:hidden">
+      <div className="fixed top-4 left-4 z-50 flex items-center justify-start rounded-md p-4 md:hidden">
         <Button aria-label="Open menu" onClick={() => setOpenMobile(true)}>
           <Menu className="size-5" />
         </Button>
       </div>
 
       {/* SIDEBAR */}
-      <Sidebar collapsible="icon">
+      <Sidebar collapsible="icon" className="relative h-screen">
         <SidebarHeader className="border-b">
           <div className="flex items-center justify-between px-2 py-2">
             <Link href="/" className="flex min-w-0 items-center gap-2">

@@ -67,8 +67,8 @@ export function ComponentCard({
   }
 
   return (
-    <section>
-      <Card id="starting-kit" className="border-foreground/25">
+    <section className="w-full">
+      <Card id="starting-kit" className="w-full border-foreground/25">
         <CardHeader>
           <div className="flex flex-col gap-4">
             <CardTitle className="font-medium text-lg">{title}</CardTitle>
@@ -111,7 +111,7 @@ export function ComponentCard({
           </div>
         </CardHeader>
 
-        <CardContent className="flex flex-col items-center justify-center gap-4 rounded-md px-6">
+        <CardContent className="flex flex-col items-center justify-center gap-4 rounded-md px-6 w-full">
           {components &&
             Object.entries(components).map(([key, node]) => (
               <div className="w-full" key={key}>

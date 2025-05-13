@@ -1,4 +1,4 @@
-import type React from "react";
+import React from "react";
 import { Toaster } from "sonner";
 
 import { BrandHeader } from "@/components/brand-header";
@@ -20,10 +20,12 @@ export default function RootLayout({
     >
       <SidebarProvider>
         <BrandHeader />
-        <BrandSidebar />
-        <main className="mt-16 flex w-full justify-center bg-[var(--color-page-background-primary)]">
-          <div className="container p-6">{children}</div>
-        </main>
+        <div className="flex">
+          <BrandSidebar />
+          <main className="mt-16 flex-1 bg-[var(--color-page-background-primary)] ml-0 md:ml-[16rem]">
+            <div className="container p-6">{children}</div>
+          </main>
+        </div>
         <Toaster />
       </SidebarProvider>
     </div>

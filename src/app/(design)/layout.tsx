@@ -18,12 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <SidebarProvider>
-      <div className="relative flex min-h-screen grow flex-col md:flex-row">
-        <RegistrySidebar />
-
-        <SidebarInset>
-          <div className="flex flex-col">{children}</div>
-        </SidebarInset>
+      <div className="flex min-h-screen min-w-full">
+        <div className="hidden md:block">
+          <RegistrySidebar />
+        </div>
+        <SidebarInset className="flex-1">{children}</SidebarInset>
       </div>
     </SidebarProvider>
   );

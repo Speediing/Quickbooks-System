@@ -23,8 +23,8 @@ export default async function ComponentPage({
   const { components } = demos[slug];
 
   return (
-    <div className="container p-5 md:p-10">
-      <div className="mb-6 flex items-center justify-between">
+    <div className="w-full">
+      <div className="mb-6 flex items-center justify-between px-5 md:px-10">
         <div>
           <Button variant="ghost" size="sm" asChild className="mb-4">
             <Link href="/">
