@@ -13,13 +13,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <SidebarProvider>
         <BrandHeader />
-        <div className="flex">
+        <div className="flex w-full">
           <BrandSidebar />
-          <main className="mt-16 flex-1 bg-background ml-0 md:ml-[16rem]">
-            <div className="container p-6">{children}</div>
+          <main className="mt-16 flex-1 bg-card text-card-foreground ml-0 md:ml-[16rem] w-full">
+            <div className="h-[calc(100vh-4rem)] w-full overflow-auto">
+              {children}
+            </div>
           </main>
         </div>
         <Toaster />

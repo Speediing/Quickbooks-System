@@ -108,15 +108,10 @@ export function BrandSidebar({
   ];
 
   return (
-    <Sidebar className="mt-16 bg-muted border-r border-border">
+    <Sidebar className="mt-16 border-r min-w-[255px]">
       <SidebarHeader>
         <div className={cn(isCollapsed ? "py-2" : "p-2")}>
-          <Button
-            className={cn(
-              isCollapsed ? "h-8 w-8 p-0" : "w-full",
-              "bg-primary text-primary-foreground hover:bg-primary/90"
-            )}
-          >
+          <Button className={cn(isCollapsed ? "h-8 w-8 p-0" : "w-full")}>
             <Plus className={cn("size-4", !isCollapsed && "mr-1")} />
             {!isCollapsed && <span>Create</span>}
           </Button>
@@ -133,7 +128,6 @@ export function BrandSidebar({
                     asChild
                     isActive={pathname === item.href}
                     tooltip={item.title}
-                    className="text-foreground hover:bg-muted data-[active=true]:bg-muted/80 data-[active=true]:text-foreground"
                   >
                     <Link href={item.href}>
                       {item.icon}
@@ -141,13 +135,7 @@ export function BrandSidebar({
                     </Link>
                   </SidebarMenuButton>
                   {item.badge && (
-                    <SidebarMenuBadge
-                      className={cn(
-                        "border border-border bg-muted text-foreground"
-                      )}
-                    >
-                      {item.badge.text}
-                    </SidebarMenuBadge>
+                    <SidebarMenuBadge>{item.badge.text}</SidebarMenuBadge>
                   )}
                 </SidebarMenuItem>
               ))}
@@ -155,7 +143,7 @@ export function BrandSidebar({
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <SidebarSeparator className="border-border/50" />
+        <SidebarSeparator />
 
         {/* Tools Nav Items */}
         <SidebarGroup>
@@ -167,7 +155,6 @@ export function BrandSidebar({
                     asChild
                     isActive={pathname === item.href}
                     tooltip={item.title}
-                    className="text-foreground hover:bg-muted data-[active=true]:bg-muted/80 data-[active=true]:text-foreground"
                   >
                     <Link href={item.href}>
                       {item.icon}
@@ -175,13 +162,7 @@ export function BrandSidebar({
                     </Link>
                   </SidebarMenuButton>
                   {item.badge && (
-                    <SidebarMenuBadge
-                      className={cn(
-                        "border border-border bg-muted text-foreground"
-                      )}
-                    >
-                      {item.badge.text}
-                    </SidebarMenuBadge>
+                    <SidebarMenuBadge>{item.badge.text}</SidebarMenuBadge>
                   )}
                 </SidebarMenuItem>
               ))}

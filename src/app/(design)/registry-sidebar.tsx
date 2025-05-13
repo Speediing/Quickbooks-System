@@ -111,7 +111,7 @@ export function RegistrySidebar() {
       </div>
 
       {/* SIDEBAR */}
-      <Sidebar collapsible="icon" className="relative h-screen">
+      <Sidebar collapsible="icon" className="relative h-screen ">
         <SidebarHeader className="border-b">
           <div className="flex items-center justify-between px-2 py-2">
             <Link href="/" className="flex min-w-0 items-center gap-2">
