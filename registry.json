@@ -39,7 +39,7 @@
           "target": "app/globals.css"
         },
         {
-          "path": "src/app/starter/tailwind.config.ts",
+          "path": "tailwind.config.ts",
           "type": "registry:file",
           "target": "tailwind.config.ts"
         },

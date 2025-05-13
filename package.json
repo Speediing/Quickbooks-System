@@ -9,7 +9,7 @@
     "test": "vitest run",
     "lint": "biome check",
     "lint:fix": "biome check --write",
-    "registry:build": "npx shadcn@latest build"
+    "registry:build": "npx shadcn@canary build"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
