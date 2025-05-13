@@ -27,28 +27,28 @@ export default function TokensPage() {
       <section className="mb-12">
         <h2 className="mb-4 font-semibold text-xl">Primary Theme</h2>
         <p className="mb-6 text-muted-foreground">
-          The core colors that define the primary theme and overall look of the
-          interface.
+          The core colors that define the QuickBooks theme and overall look of
+          the interface.
         </p>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <ColorBlock
             name="Background"
-            value="oklch(0.97 0.01 80.72)"
+            value="#ffffff"
             className="bg-background text-foreground"
           />
           <ColorBlock
             name="Foreground"
-            value="oklch(0.3 0.04 30.2)"
+            value="#393a3d"
             className="bg-foreground text-background"
           />
           <ColorBlock
             name="Primary"
-            value="oklch(0.52 0.13 144.17)"
+            value="#2ca01c"
             className="bg-primary text-primary-foreground"
           />
           <ColorBlock
             name="Primary Foreground"
-            value="oklch(1.0 0 0)"
+            value="#ffffff"
             className="bg-primary-foreground text-primary"
           />
         </div>
@@ -64,22 +64,22 @@ export default function TokensPage() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <ColorBlock
             name="Secondary"
-            value="oklch(0.96 0.02 147.64)"
+            value="#2ca01c"
             className="bg-secondary text-secondary-foreground"
           />
           <ColorBlock
             name="Secondary Foreground"
-            value="oklch(0.43 0.12 144.31)"
+            value="#ffffff"
             className="bg-secondary-foreground text-secondary"
           />
           <ColorBlock
             name="Accent"
-            value="oklch(0.9 0.05 146.04)"
+            value="#393a3d"
             className="bg-accent text-accent-foreground"
           />
           <ColorBlock
             name="Accent Foreground"
-            value="oklch(0.43 0.12 144.31)"
+            value="#ffffff"
             className="bg-accent-foreground text-accent"
           />
         </div>
@@ -95,32 +95,32 @@ export default function TokensPage() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <ColorBlock
             name="Card"
-            value="oklch(0.97 0.01 80.72)"
+            value="#ffffff"
             className="bg-card text-card-foreground"
           />
           <ColorBlock
             name="Card Foreground"
-            value="oklch(0.3 0.04 30.2)"
+            value="#393a3d"
             className="bg-card-foreground text-card"
           />
           <ColorBlock
             name="Popover"
-            value="oklch(0.97 0.01 80.72)"
+            value="#ffffff"
             className="bg-popover text-popover-foreground"
           />
           <ColorBlock
             name="Popover Foreground"
-            value="oklch(0.3 0.04 30.2)"
+            value="#393a3d"
             className="bg-popover-foreground text-popover"
           />
           <ColorBlock
             name="Muted"
-            value="oklch(0.94 0.01 74.42)"
+            value="#eceef1"
             className="bg-muted text-muted-foreground"
           />
           <ColorBlock
             name="Muted Foreground"
-            value="oklch(0.45 0.05 39.21)"
+            value="#6b6c72"
             className="bg-muted-foreground text-muted"
           />
         </div>
@@ -135,17 +135,17 @@ export default function TokensPage() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <ColorBlock
             name="Border"
-            value="oklch(0.88 0.02 74.64)"
+            value="#8d9096"
             className="bg-border text-foreground"
           />
           <ColorBlock
             name="Input"
-            value="oklch(0.88 0.02 74.64)"
+            value="#8d9096"
             className="bg-input text-foreground"
           />
           <ColorBlock
             name="Ring"
-            value="oklch(0.52 0.13 144.17)"
+            value="#0077c5"
             className="bg-ring text-foreground"
           />
         </div>
@@ -161,12 +161,12 @@ export default function TokensPage() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <ColorBlock
             name="Destructive"
-            value="oklch(0.54 0.19 26.72)"
+            value="#d52b1e"
             className="bg-destructive text-destructive-foreground"
           />
           <ColorBlock
             name="Destructive Foreground"
-            value="oklch(1.0 0 0)"
+            value="#ffffff"
             className="bg-destructive-foreground text-destructive"
           />
         </div>
@@ -181,27 +181,27 @@ export default function TokensPage() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-5">
           <ColorBlock
             name="Chart 1"
-            value="oklch(0.67 0.16 144.21)"
+            value="#0077c5"
             className="bg-chart-1 text-foreground"
           />
           <ColorBlock
             name="Chart 2"
-            value="oklch(0.58 0.14 144.18)"
+            value="#00a6a4"
             className="bg-chart-2 text-foreground"
           />
           <ColorBlock
             name="Chart 3"
-            value="oklch(0.52 0.13 144.17)"
+            value="#4e2b8f"
             className="bg-chart-3 text-foreground"
           />
           <ColorBlock
             name="Chart 4"
-            value="oklch(0.43 0.12 144.31)"
+            value="#f95700"
             className="bg-chart-4 text-foreground"
           />
           <ColorBlock
             name="Chart 5"
-            value="oklch(0.22 0.05 145.73)"
+            value="#b80000"
             className="bg-chart-5 text-foreground"
           />
         </div>
@@ -216,42 +216,42 @@ export default function TokensPage() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <ColorBlock
             name="Sidebar"
-            value="oklch(0.94 0.01 74.42)"
-            className="bg-sidebar))] textdebar-foreground"
+            value="#eceef1"
+            className="bg-sidebar text-sidebar-foreground"
           />
           <ColorBlock
             name="Sidebar Foreground"
-            value="oklch(0.3 0.04 30.2)"
+            value="#393a3d"
             className="bg-sidebar-foreground text-sidebar"
           />
           <ColorBlock
             name="Sidebar Primary"
-            value="oklch(0.52 0.13 144.17)"
-            className="bg-sidebar-primary text-sidebar-primary-forereground"
+            value="#2ca01c"
+            className="bg-sidebar-primary text-sidebar-primary-foreground"
           />
           <ColorBlock
             name="Sidebar Primary Foreground"
-            value="oklch(1.0 0 0)"
+            value="#ffffff"
             className="bg-sidebar-primary-foreground text-sidebar-primary"
           />
           <ColorBlock
             name="Sidebar Accent"
-            value="oklch(0.9 0.05 146.04)"
+            value="#393a3d"
             className="bg-sidebar-accent text-sidebar-accent-foreground"
           />
           <ColorBlock
             name="Sidebar Accent Foreground"
-            value="oklch(0.43 0.12 144.31)"
+            value="#ffffff"
             className="bg-sidebar-accent-foreground text-sidebar-accent"
           />
           <ColorBlock
             name="Sidebar Border"
-            value="oklch(0.88 0.02 74.64)"
+            value="#8d9096"
             className="bg-sidebar-border text-sidebar-foreground"
           />
           <ColorBlock
             name="Sidebar Ring"
-            value="oklch(0.52 0.13 144.17)"
+            value="#0077c5"
             className="bg-sidebar-ring text-sidebar-foreground"
           />
         </div>
