@@ -44,7 +44,7 @@ export function ComponentCard({
   const [copied, setCopied] = useState(false);
 
   const component = getComponent(name);
-
+  component;
   const registryUrl = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/r/${name}.json`;
   const npxCommand = `npx shadcn@latest add ${registryUrl}`;
 

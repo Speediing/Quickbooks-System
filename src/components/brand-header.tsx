@@ -1,6 +1,14 @@
 "use client";
 
-import { HelpCircle, Menu, Search, X } from "lucide-react";
+import {
+  Bell,
+  HelpCircle,
+  Menu,
+  Plus,
+  Search,
+  Settings,
+  X,
+} from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -17,13 +25,13 @@ export function BrandHeader() {
   const isCollapsed = state === "collapsed";
 
   return (
-    <header className="fixed z-50 w-full border-border border-b bg-background">
-      <div className="flex h-16 items-center justify-between px-2">
+    <header className="fixed z-50 w-full border-b border-[var(--color-container-border-primary)] bg-[var(--color-container-background-primary)]">
+      <div className="flex h-16 items-center justify-between px-4">
         <div className="flex items-center space-x-4">
           <Button
             variant="ghost"
             size="icon"
-            className="hidden size-8 md:flex"
+            className="hidden size-8 md:flex text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
             onClick={toggleSidebar}
           >
             {isCollapsed ? (
@@ -36,7 +44,7 @@ export function BrandHeader() {
           <Button
             variant="ghost"
             size="icon"
-            className="size-8 md:hidden"
+            className="size-8 md:hidden text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
             onClick={toggleSidebar}
           >
             <Menu className="size-4" />
@@ -47,52 +55,76 @@ export function BrandHeader() {
           </Link>
         </div>
 
-        <div className="hidden items-center space-x-1 md:flex">
-          {isSearchOpen ? (
-            <div className="relative">
-              <Input
-                type="text"
-                placeholder="Search"
-                className="h-9 w-64 pl-9"
-                autoFocus
-                onBlur={() => setIsSearchOpen(false)}
-              />
-              <Search className="absolute top-2.5 left-3 size-4 text-foreground" />
-            </div>
-          ) : (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-foreground"
-              onClick={() => setIsSearchOpen(true)}
-            >
-              <Search className="mr-2 size-4" />
-              Search
-            </Button>
-          )}
+        <div className="hidden items-center space-x-4 md:flex">
+          <div className="relative">
+            <Input
+              type="text"
+              placeholder="Search (Ctrl + /)"
+              className="h-9 w-96 pl-9 bg-[var(--color-input-background-primary)] border-[var(--color-input-border-primary)] text-[var(--color-text-primary)] placeholder:text-[var(--color-input-placeholder)]"
+            />
+            <Search className="absolute top-2.5 left-3 size-4 text-[var(--color-icon-secondary)]" />
+          </div>
 
-          <Button variant="ghost" size="sm" className="text-foreground">
-            <HelpCircle className="mr-2 size-4" />
-            Support
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+          >
+            <Plus className="mr-2 size-4" />
+            New
           </Button>
 
-          <Button variant="ghost" size="sm" className="text-foreground">
-            Upgrade Trial
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+          >
+            <Bell className="mr-2 size-4" />
+            Notifications
+          </Button>
+
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+          >
+            <HelpCircle className="mr-2 size-4" />
+            Help
+          </Button>
+
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+          >
+            <Settings className="mr-2 size-4" />
+            Settings
           </Button>
 
           <Avatar className="size-8">
-            <AvatarFallback className="bg-primary text-primary-foreground">
+            <AvatarFallback className="bg-[var(--color-ui-primary)] text-[var(--color-text-accent)]">
               <span className="text-xs">ME</span>
             </AvatarFallback>
           </Avatar>
         </div>
 
         <div className="flex gap-2 md:hidden">
-          <Button variant="ghost" size="sm" className="text-foreground">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+          >
             <Search className="h-5 w-5" />
           </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)]"
+          >
+            <Bell className="h-5 w-5" />
+          </Button>
           <Avatar className="size-8">
-            <AvatarFallback className="bg-primary text-primary-foreground">
+            <AvatarFallback className="bg-[var(--color-ui-primary)] text-[var(--color-text-accent)]">
               <span className="text-xs">ME</span>
             </AvatarFallback>
           </Avatar>

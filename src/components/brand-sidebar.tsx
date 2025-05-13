@@ -58,66 +58,69 @@ export function BrandSidebar({
 
   const mainNavItems: NavItem[] = [
     {
-      title: "Home",
+      title: "Dashboard",
       href: "#",
       icon: <Home className="size-4" />,
     },
     {
-      title: "Projects",
-      href: "#projects",
-      icon: <LayoutGrid className="size-4" />,
+      title: "Sales",
+      href: "#sales",
+      icon: <BarChart2 className="size-4" />,
     },
     {
-      title: "Databases",
-      href: "#databases",
+      title: "Expenses",
+      href: "#expenses",
       icon: <Database className="size-4" />,
     },
     {
-      title: "Tables",
-      href: "#tables",
+      title: "Banking",
+      href: "#banking",
       icon: <Table className="size-4" />,
-      badge: {
-        text: "Beta",
-      },
     },
     {
-      title: "AI",
-      href: "#ai",
+      title: "Reports",
+      href: "#reports",
       icon: <MessageSquareText className="size-4" />,
-      badge: {
-        text: "Alpha",
-      },
     },
   ];
 
   const toolsNavItems: NavItem[] = [
     {
-      title: "Alerts",
-      href: "#alerts",
+      title: "Taxes",
+      href: "#taxes",
       icon: <AlertTriangle className="size-4" />,
     },
     {
-      title: "Analytics",
-      href: "#analytics",
+      title: "Payroll",
+      href: "#payroll",
       icon: <BarChart2 className="size-4" />,
     },
     {
-      title: "History",
-      href: "#history",
+      title: "Accounting",
+      href: "#accounting",
       icon: <Clock className="size-4" />,
     },
     {
-      title: "More",
-      href: "#more",
+      title: "Settings",
+      href: "#settings",
       icon: <MoreHorizontal className="size-4" />,
     },
   ];
 
   return (
-    <Sidebar variant="sidebar" collapsible="icon" className="mt-16">
+    <Sidebar
+      variant="sidebar"
+      collapsible="icon"
+      className="mt-16 bg-[var(--color-container-background-secondary)] border-r border-[var(--color-container-border-primary)]"
+    >
       <SidebarHeader>
         <div className={cn(isCollapsed ? "py-2" : "p-2")}>
-          <Button className={cn(isCollapsed ? "h-8 w-8 p-0" : "w-full")}>
+          <Button
+            className={cn(
+              isCollapsed ? "h-8 w-8 p-0" : "w-full",
+              "bg-[var(--color-ui-primary)] text-[var(--color-text-accent)] hover:bg-[var(--color-ui-primary-hover)]"
+            )}
+          >
             <Plus className={cn("size-4", !isCollapsed && "mr-1")} />
             {!isCollapsed && <span>Create</span>}
           </Button>
@@ -138,6 +141,7 @@ export function BrandSidebar({
                       (pathname === "" && item.href === "/")
                     }
                     tooltip={item.title}
+                    className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)] data-[active=true]:bg-[var(--color-container-background-accent-selected)] data-[active=true]:text-[var(--color-text-primary)]"
                   >
                     <Link href={item.href}>
                       {item.icon}
@@ -147,7 +151,7 @@ export function BrandSidebar({
                   {item.badge && (
                     <SidebarMenuBadge
                       className={cn(
-                        "border border-border bg-muted text-foreground",
+                        "border border-[var(--color-container-border-primary)] bg-[var(--color-container-background-accent)] text-[var(--color-text-primary)]"
                       )}
                     >
                       {item.badge.text}
@@ -159,7 +163,7 @@ export function BrandSidebar({
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <SidebarSeparator />
+        <SidebarSeparator className="border-[var(--color-container-border-tertiary)]" />
 
         {/* Tools Nav Items */}
         <SidebarGroup>
@@ -171,6 +175,7 @@ export function BrandSidebar({
                     asChild
                     isActive={pathname === item.href}
                     tooltip={item.title}
+                    className="text-[var(--color-text-primary)] hover:bg-[var(--color-container-background-accent-hover)] data-[active=true]:bg-[var(--color-container-background-accent-selected)] data-[active=true]:text-[var(--color-text-primary)]"
                   >
                     <Link href={item.href}>
                       {item.icon}
@@ -180,7 +185,7 @@ export function BrandSidebar({
                   {item.badge && (
                     <SidebarMenuBadge
                       className={cn(
-                        "border border-border bg-muted text-foreground",
+                        "border border-[var(--color-container-border-primary)] bg-[var(--color-container-background-accent)] text-[var(--color-text-primary)]"
                       )}
                     >
                       {item.badge.text}

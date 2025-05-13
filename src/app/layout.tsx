@@ -9,9 +9,9 @@ import "@/app/globals.css";
 import "@/app/tailwind.css";
 
 export const metadata: Metadata = {
-  title: "Design Registry",
+  title: "Quickbooks Design System",
   description:
-    "Starter to help build a Shadcn Design Registry using Tailwind v4",
+    "Starter to help build a Quickbooks Design System using Tailwind v4",
   icons: [{ rel: "icon", url: "/favicon.svg", type: "image/svg+xml" }],
 };
 

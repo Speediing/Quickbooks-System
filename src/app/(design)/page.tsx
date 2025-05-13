@@ -31,7 +31,7 @@ export default function Home() {
       <div className="mx-auto max-w-5xl space-y-8">
         <div className="space-y-2">
           <h1 className="font-bold text-3xl tracking-tight md:text-4xl">
-            Design Registry
+            Quickbooks Design System
           </h1>
           <p className="text-muted-foreground">
             A collection of components and blocks for your design system
@@ -102,12 +102,14 @@ export default function Home() {
 
         <div className="rounded-lg border bg-card p-6">
           <div className="flex flex-col gap-2">
-            <h2 className="font-semibold text-xl">About the Design Registry</h2>
+            <h2 className="font-semibold text-xl">
+              About the Quickbooks Design System
+            </h2>
             <p className="text-muted-foreground">
-              This design registry serves as a central repository for all UI
-              components and blocks used in your applications. It helps maintain
-              consistency across your products and speeds up development by
-              providing ready-to-use components.
+              This Quickbooks design system serves as a central repository for
+              all UI components and blocks used in your applications. It helps
+              maintain consistency across your products and speeds up
+              development by providing ready-to-use components.
             </p>
             <p className="mt-2 text-muted-foreground">
               Each component and block is documented with examples, props, and

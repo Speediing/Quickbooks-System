@@ -4,19 +4,16 @@ export function Logo() {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
         className="size-8"
         role="graphics-symbol"
       >
-        <circle className="fill-primary" cx="13.5" cy="6.5" r="2.5" />
-        <circle className="fill-primary" cx="19" cy="13" r="2.5" />
-        <circle className="fill-primary" cx="13.5" cy="19.5" r="2.5" />
-        <circle className="fill-primary" cx="6.5" cy="13" r="2.5" />
+        <path
+          className="fill-primary"
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"
+        />
       </svg>
 
-      <h1 className="font-bold">Brand Name</h1>
+      <h1 className="text-xl font-bold text-primary">QuickBooks</h1>
     </div>
   );
 }
