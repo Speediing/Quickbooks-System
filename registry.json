@@ -36,6 +36,16 @@
         "button"],
       "files": [
         {
+          "path":"src/components/theme-provider.tsx",
+          "type": "registry:file",
+          "target": "components/theme-provider.tsx"
+        },
+        {
+          "path": "src/app/starter/dashboard/clientLayout.tsx",
+          "type": "registry:file",
+          "target": "app/clientLayout.tsx"
+        },
+        {
           "path": "src/app/globals.css",
           "type": "registry:file",
           "target": "app/globals.css"
@@ -46,7 +56,7 @@
           "target": "tailwind.config.ts"
         },
         {
-          "path": "src/app/starter/dashboard/root-layout.tsx",
+          "path": "src/app/starter/dashboard/layout.tsx",
           "type": "registry:file",
           "target": "app/layout.tsx"
         },
