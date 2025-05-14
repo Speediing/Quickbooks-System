@@ -43,7 +43,7 @@
         {
           "path": "src/app/starter/dashboard/clientLayout.tsx",
           "type": "registry:file",
-          "target": "app/clientLayout.tsx"
+          "target": "app/components/clientLayout.tsx"
         },
         {
           "path": "src/app/globals.css",
