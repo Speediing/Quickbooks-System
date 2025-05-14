@@ -46,9 +46,9 @@
           "target": "app/clientLayout.tsx"
         },
         {
-          "path": "globals.css",
+          "path": "src/app/globals.css",
           "type": "registry:file",
-          "target": "app/globals.css"
+          "target": "globals.css"
         },
         {
           "path": "tailwind.config.ts",
