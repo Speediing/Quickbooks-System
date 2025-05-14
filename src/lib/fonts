@@ -1,0 +1,25 @@
+import { Inter, Nunito_Sans, Work_Sans } from "next/font/google";
+
+// Primary font: Inter - A modern sans-serif with excellent readability
+export const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+// Alternative 1: Nunito Sans - A well-balanced sans-serif with geometric touches
+export const nunitoSans = Nunito_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-nunito-sans",
+});
+
+// Alternative 2: Work Sans - A minimalist sans-serif with similar proportions to Avenir
+export const workSans = Work_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-work-sans",
+});
+
+// Export the primary font as the main QuickBooks font
+export const quickbooksFont = inter;
