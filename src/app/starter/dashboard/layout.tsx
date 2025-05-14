@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import ClientRootLayout from "./clientLayout";
+import ClientRootLayout from "@/components/clientLayout";
 
 export const metadata: Metadata = {
   title: "QuickBooks Theme",
