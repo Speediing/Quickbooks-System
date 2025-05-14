@@ -46,7 +46,7 @@
           "target": "app/clientLayout.tsx"
         },
         {
-          "path": "src/app/globals.css",
+          "path": "globals.css",
           "type": "registry:file",
           "target": "app/globals.css"
         },
