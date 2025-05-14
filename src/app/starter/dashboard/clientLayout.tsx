@@ -37,8 +37,6 @@ export default function ClientRootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const searchParams = useSearchParams();
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body
