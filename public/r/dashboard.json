@@ -10,7 +10,7 @@
   "files": [
     {
       "path": "src/components/theme-provider.tsx",
-      "content": "\"use client\";\nimport { ThemeProvider as NextThemesProvider } from \"next-themes\";\nimport type { ThemeProviderProps } from \"next-themes\";\n\nexport function ThemeProvider({ children, ...props }: ThemeProviderProps) {\n  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;\n}\n",
+      "content": "\"use client\";\nimport { ThemeProvider as NextThemesProvider } from \"next-themes\";\nimport type { ThemeProviderProps } from \"next-themes\";\nimport type { ReactNode } from \"react\";\n\nexport function ThemeProvider({\n  children,\n  ...props\n}: ThemeProviderProps & { children: ReactNode }) {\n  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;\n}\n",
       "type": "registry:file",
       "target": "components/theme-provider.tsx"
     },

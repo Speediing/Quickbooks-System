@@ -4,6 +4,7 @@ import { Geist } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 
 import "./globals.css";
 // import "@/app/tailwind.css";
@@ -25,9 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(geist.className, "bg-background")}>
       <body>
-        {children}
-
-        {process.env.NODE_ENV === "development" && <VercelToolbar />}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
