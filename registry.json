@@ -42,8 +42,7 @@
         },
         {
           "path": "src/app/starter/dashboard/clientLayout.tsx",
-          "type": "registry:file",
-          "target": "app/components/clientLayout.tsx"
+          "type": "registry:component",
         },
         {
           "path": "src/app/globals.css",
