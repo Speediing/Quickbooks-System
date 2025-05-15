@@ -11,11 +11,11 @@ const starters = [
     name: "dashboard",
     url: "/starter/dashboard",
   },
-  {
-    title: "Store",
-    name: "store",
-    url: "/starter/store",
-  },
+  // {
+  //   title: "Store",
+  //   name: "store",
+  //   url: "/starter/store",
+  // },
   {
     title: "Blank",
     name: "blank",

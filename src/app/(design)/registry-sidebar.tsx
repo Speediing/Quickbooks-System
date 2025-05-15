@@ -111,28 +111,31 @@ export function RegistrySidebar() {
       </div>
 
       {/* SIDEBAR */}
-      <Sidebar collapsible="icon" className="relative h-screen ">
-        <SidebarHeader className="border-b">
-          <div className="flex items-center justify-between px-2 py-2">
+      <Sidebar
+        collapsible="icon"
+        className="relative h-screen bg-muted text-muted-foreground border-r border-accent shadow-xl"
+      >
+        <SidebarHeader className="border-b border-accent bg-muted/80 backdrop-blur">
+          <div className="flex items-center justify-between px-4 py-3">
             <Link href="/" className="flex min-w-0 items-center gap-2">
               <RegistryLogo />
             </Link>
 
             <Button
               variant="ghost"
-              className="md:hidden"
+              className="md:hidden text-muted-foreground hover:bg-accent/20"
               onClick={() => setOpenMobile(false)}
             >
               <X />
             </Button>
           </div>
-          <div className="px-2 py-2 opacity-100 transition-all duration-200">
+          <div className="px-4 py-2">
             <div className="relative">
-              <Search className="absolute top-2.5 left-2.5 size-4 text-muted-foreground" />
+              <Search className="absolute top-2.5 left-3 size-4 text-accent" />
               <Input
                 type="search"
                 placeholder="Search..."
-                className="pl-8"
+                className="pl-9 bg-background/80 text-primary border border-accent rounded-md focus:ring-accent placeholder:text-muted-foreground"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -144,14 +147,12 @@ export function RegistrySidebar() {
           <Collapsible defaultOpen={true} className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
-                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between px-4 py-2 text-xs font-bold text-accent tracking-wider uppercase">
                   <div className="flex min-w-0 items-center">
-                    <Home className="size-4 flex-shrink-0" />
-                    <span className="ml-2 opacity-100 transition-all duration-200">
-                      Getting Started
-                    </span>
+                    <Home className="size-4 flex-shrink-0 text-accent" />
+                    <span className="ml-2">Getting Started</span>
                   </div>
-                  <ChevronDown className="size-4 flex-shrink-0 opacity-100 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+                  <ChevronDown className="size-4 flex-shrink-0 group-data-[state=open]/collapsible:rotate-180 text-accent" />
                 </SidebarGroupLabel>
               </CollapsibleTrigger>
 
@@ -163,11 +164,10 @@ export function RegistrySidebar() {
                         <SidebarMenuButton
                           asChild
                           isActive={pathname === item.path}
+                          className="rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent-foreground data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
                         >
                           <Link href={item.path} className="flex items-center">
-                            <span className="ml-2 opacity-100 transition-all duration-200">
-                              {item.name}
-                            </span>
+                            <span className="ml-2">{item.name}</span>
                           </Link>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
@@ -181,14 +181,12 @@ export function RegistrySidebar() {
           <Collapsible defaultOpen={true} className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
-                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between px-4 py-2 text-xs font-bold text-accent tracking-wider uppercase">
                   <div className="flex min-w-0 items-center">
-                    <Blocks className="size-4 flex-shrink-0" />
-                    <span className="ml-2 transition-all duration-200">
-                      Blocks
-                    </span>
+                    <Blocks className="size-4 flex-shrink-0 text-accent" />
+                    <span className="ml-2">Blocks</span>
                   </div>
-                  <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+                  <ChevronDown className="size-4 flex-shrink-0 group-data-[state=open]/collapsible:rotate-180 text-accent" />
                 </SidebarGroupLabel>
               </CollapsibleTrigger>
 
@@ -200,6 +198,7 @@ export function RegistrySidebar() {
                         <SidebarMenuButton
                           asChild
                           isActive={pathname === item.path}
+                          className="rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent-foreground data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
                         >
                           <Link href={item.path}>{item.name}</Link>
                         </SidebarMenuButton>
@@ -214,14 +213,12 @@ export function RegistrySidebar() {
           <Collapsible defaultOpen={true} className="group/collapsible">
             <SidebarGroup>
               <CollapsibleTrigger className="w-full">
-                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
+                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between px-4 py-2 text-xs font-bold text-accent tracking-wider uppercase">
                   <div className="flex min-w-0 items-center">
-                    <ToyBrick className="size-4 flex-shrink-0" />
-                    <span className="ml-2 transition-all duration-200">
-                      Components
-                    </span>
+                    <ToyBrick className="size-4 flex-shrink-0 text-accent" />
+                    <span className="ml-2">Components</span>
                   </div>
-                  <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
+                  <ChevronDown className="size-4 flex-shrink-0 group-data-[state=open]/collapsible:rotate-180 text-accent" />
                 </SidebarGroupLabel>
               </CollapsibleTrigger>
               <CollapsibleContent>
@@ -232,6 +229,7 @@ export function RegistrySidebar() {
                         <SidebarMenuButton
                           asChild
                           isActive={pathname === item.path}
+                          className="rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent/10 hover:text-accent-foreground data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
                         >
                           <Link href={item.path}>{item.name}</Link>
                         </SidebarMenuButton>
