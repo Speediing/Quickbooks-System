@@ -7,7 +7,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import { Inter, Nunito_Sans, Work_Sans } from "next/font/google";
-import "../../globals.css";
 
 // Primary font: Inter - A modern sans-serif with excellent readability
 
