@@ -41,8 +41,8 @@
           "target": "components/theme-provider.tsx"
         },
         {
-          "path": "src/app/starter/dashboard/clientLayout.tsx",
-          "type": "registry:component",
+          "path": "src/components/clientLayout.tsx",
+          "type": "registry:component"
         },
         {
           "path": "src/app/globals.css",
